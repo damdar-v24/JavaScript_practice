@@ -1,3 +1,3 @@
-# Java_practice
+# JavaScript_practice
 Repo to store practice code of JavaScript
 
