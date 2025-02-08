@@ -1,4 +1,6 @@
 
+/* 2nd Lecture notes on Array */
+
 push() ===> this will add the array inside array (nested array) and this will create a problem
 
 ===> we can concat two arrays by using concat() method

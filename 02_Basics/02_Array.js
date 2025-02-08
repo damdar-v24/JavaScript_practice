@@ -39,3 +39,5 @@ let score2 = 200
 let score3 = 300
 
 console.log(Array.of(score1, score2, score3));  // array.of() => used to convert set of elements into array and returns new array
+
+
