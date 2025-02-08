@@ -70,6 +70,8 @@ console.log("Splice :", myn2);
 
 
 
+
+
 // Example of Shallow Copy
 
 const originalObject = { name: "Alice", details: { age: 25 } };
