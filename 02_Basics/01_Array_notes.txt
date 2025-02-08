@@ -20,6 +20,38 @@ let letters = Array.from(str);  => ['h', 'e', 'l', 'l', 'o']
 => Array.from() : This method creates a new array from an array-like or iterable object (like strings or sets)
 
 
+
+
+/*************** Array Methods ***************/
+
+1. push() => Adds one or more elements to the end of an array
+
+2. pop() => Removes the last element from an array.
+
+4. unshift() => Adds one or more elements to the beginning of an array.
+
+5. shift() => Removes the first element from an array.
+
+6. includes() => Checks if an array contains a specified element.
+
+7. indexOf() => Returns the first index at which a given element appears in an array. If the element is not found, it returns -1.
+
+8. join() => method is used to combine all the elements of an array into a single string. datatype of the output will be String.
+
+9. slice() => without modifying the original array, It returns a new array containing the sliced elements.
+
+10. splice() => return a new array containing the values between given index including lower and upper index limit and  Modifies the original array by removing elements.
+
+. Arrays.sort() => Sorts the elements of an array in ascending order.
+
+. Arrays.toString() => Converts an array to a string representation
+
+. Arrays.equals() => Compares two arrays for equality
+
+
+
+
+
 => Example of Shallow Copy
 
 const originalObject = { name: "Alice", details: { age: 25 } };
