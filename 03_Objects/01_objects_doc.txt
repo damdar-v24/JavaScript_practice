@@ -1,0 +1,86 @@
+Point 1.  Object in JavaScript
+
+In JavaScript, an object is a collection of key-value pairs, where each key is a string (also called a property name), and the value can be any data type, such as a string, number, array, function, or even another object.
+
+Point 2.  Objects can be created in two main ways:
+
+a. Using Object Literal Syntax (the most common method):
+
+syntax ==> const JsUser = { 
+                \\ key:value pairs
+             }
+
+
+// Declaring object as Literal
+
+const myObj = {
+    name :"Vaibhav",
+    age : 25 ,
+    city : "Pune",
+    email : "damdarv@chatgpt.com"
+}
+
+
+Point 3. we can access the valuess of this object by two ways
+
+===> console.log(myObj.name); 
+
+if in object the value is declared like 
+"name" = "Vaibhav" then we can not access this value by using . notataion (myobj.name)
+
+===> console.log(myObj["name"]);  
+
+used to access "name" = "Vaibhav" this type of values and this is more appropriate way to access the values
+
+
+Point 4. We can modify the value of the object
+
+myObj.email="vd.123";
+
+
+
+Point 5. Declaring symbol 
+
+syntax ==> const mySym = symbol("key")
+
+
+if you want to use symbol as key in object and print tha value of the symbol then you have to wrap the key in []
+
+ex. ==> const mySym = symbol("key")
+
+const myobj ={
+    name : "vaibhav",
+    [mySym] : "mykey1"  // here we wrap the key in [] to use symbol as key in the object
+}
+
+
+Point 6. if you want to freeze the value of object (the value of the object can't be change after freeze)
+
+syntax ==> Object.freeze(obj_name);
+
+
+
+Point 7. you canc declare the function 
+
+===> object_name.function_name = function() { }
+
+to access this function
+
+===> object_name.function_name();
+
+
+
+Point 8. string interpolation
+
+syntax ===> ${parameter}
+
+Key points ==> 
+
+Backticks (`): Use backticks to define the template literal instead of regular quotes (' or ").
+
+${expression}: The ${} syntax is used to insert expressions into the string, such as variables or more complex expressions.
+
+ex: 
+const name = "Alice";
+const message = `Hello, ${name}!`;
+console.log(message);  ==> prints Hello Alice !
