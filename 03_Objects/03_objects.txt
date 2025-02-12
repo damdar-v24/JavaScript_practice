@@ -92,17 +92,17 @@ console.log(user[1].email);  // user.[1] means the first value from the above ar
 
 // if we want to access the all keys only from the object then ==>
 
-console.log(Object.keys(tinderUser)); 
+// console.log(Object.keys(tinderUser)); 
 
 // Output ==> [ 'id', 'email', 'isLoggedIn' ]
 
 // similarly if we want to access the all values only from the object then ==>
 
-console.log(Object.values(tinderUser))
+// console.log(Object.values(tinderUser))
 
 // if i want to access the all values (keys and values) ==> [ 1, 'vd@gmail.com', true ]
 
-console.log(Object.entries(tinderUser)); 
+// console.log(Object.entries(tinderUser)); 
 
 // this method will convert every key value pair into array and the 1st value of array will be key and 2nd will be value  
 // Output ==> [ [ 'id', 1 ], [ 'email', 'vd@gmail.com' ], [ 'isLoggedIn', true ] ] 
@@ -120,7 +120,7 @@ const course = {
     courseInstructor : "Vaibhav"
 }
 
-console.log(course.courseInstructor);
+// console.log(course.courseInstructor);
 
 // if we want to access courseInstructor name 10 times in our code so we have to write this line course.courseInstructor 10 times so that our code will become complicated and confusing to prevent this situation we have another syntax ==>
 
@@ -128,9 +128,8 @@ console.log(course.courseInstructor);
 
     // and after this we dont need to write course.courseInstructor 
 
-    // const {courseInstructor} = course ==> If we want to change the value name then we can change accoording to us 
-    
-    // const {courseInstructor = instructor} = course
+    // const {courseInstructor} = course ==> If we want to change the value name then we can change ao=coording to us 
+    // ex: const {courseInstructor = instructor} = course
 
     console.log(courseInstructor);   // now 
 
