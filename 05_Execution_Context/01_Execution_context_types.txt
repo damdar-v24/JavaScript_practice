@@ -1,0 +1,102 @@
+Types of Execution context in JavaScript
+
+In JavaScript, execution context refers to the environment in which javascript code is executed. The Javascript engine creates and manage execution contexts in a stack (call stack)
+
+==> There are three main types of execution Context
+
+(1)  Global Execution context (GEC)
+
+> This is default execution context 
+
+> It is Created when JS file is first loaded for or when the scripts starts executing.
+
+> This keyword refers to the global objects: (window in browsers and global in node.js)
+
+ex: Console-leg (this); // in browser-window, Node.js = global.
+
+
+(2) Function Execution context (FEC)
+
+> Each time a function is called, a new function execution context is created.
+
+> Each function execution context has its own execution environment.
+
+> The execution context is pushed onto the call stack when a function is invoked and popped off when the function execution is complete.
+
+ex: function greet () {
+
+console.log("Hello");
+}
+greet ()    // create new function execution context.
+
+
+(3) Eval Execution contrat
+
+> when Javascripts eval() function ereate it creates a separate excution context.
+
+> eval() used to execute string as JS code
+
+ex: eval ("console.log('Hello from Greal');");
+
+
+[Note] → Using eval() is generally discouraged due to security and performance issues.
+
+
+# Phase of execution context.
+
+Each execution context(global or function context) goes through two phase. 
+
+(A) creation phase (memory allocation)
+
+> The JS Engine creates context. a new execution context
+
+> Variables and function declarations are Stored in memory (Hoisting happens).
+
+> The value of this is determined.
+
+> In this phase the variables are stored in memory with undefined data or without values.
+
+
+(B) Execution phase
+
+> Is executes the code line by line
+
+> Assigns value to the variable.
+
+> execute function calls,
+
+
+## Call stack and execution context.
+
+> JS uses a callstack to manage execution context.
+
+> when a function is called a new function execution context (FEC) is pushed onto the stack.
+
+> when the function finishes execution, the FEC is popped off.
+
+ex
+
+    function first(){
+        Second();
+        console.log("first function);
+    }
+
+    function second (){
+    console.log(" second function");
+    }
+
+    first();
+
+<<===>> Process <<===>>
+
+> Global execution context is created.
+
+② First () is called new FEC for first is pushed onto the stack.
+
+③ second () is called new FEC for second is pushd onto the stack.
+
+④ second () completes FEC for second is popped.
+
+⑤ first () completes → FEC for first is popped.
+
+⑥ Global execution context es remains untill Scripts ends.
