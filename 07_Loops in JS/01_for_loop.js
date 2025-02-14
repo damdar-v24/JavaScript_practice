@@ -76,3 +76,28 @@
         }
 
         // continue keyword skips the current interation and exacute all the remaining iterations
+
+
+
+/* ++++++++++++++++++++++++++ Notes +++++++++++++++++++++++++++++++
+
+The for loop is one of the most commonly used loops in JavaScript. It is used when the number of iteration is known before execution
+
+Syntax : 
+        for (initialization ; condition ; increment / decrement) { 
+            code to execute
+        }
+
+    Explaination : 
+
+    1. Initalization : A variable is initialized 
+    2. Condition : The loop runs as long as the condition is true 
+    3. Increment/decrement : the variable is updated (incrased or decreased) after each iteration
+
+When to use :
+
+    > When the number of iteration is known in advance
+    > When iterating over arrays or lists
+    > When you need counter variable
+
+*/
