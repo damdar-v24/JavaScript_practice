@@ -1,0 +1,177 @@
+
+                            /* Notes */
+
+
+// Comparison Operator 
+// <, >, <=, >=, ==, !=, ===, !==
+// (===) => strict checking = it will check the data as well as it type also
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Conditonals Statment
+
+1. If statement => 
+    based on the given condition it will execute the code if that condition is true.
+
+syntax =>
+    if (condition) {
+        // body
+    }; 
+
+Short hand for If block : 
+    it will prefer for only for the single line code 
+
+Ex: if(true) console.log("Hello brother");  
+    Also known as implicit scope
+    
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+2. If Else Statement => 
+    if the condition is true it will entered the if block and execute the code and if the condition is false then else block will execute. 
+
+    if (condition) {
+        // body
+    } else {
+        // body
+    } 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+3. IF ELSE IF => 
+    We can check the multiple condition using if else if block, we can have multiple else if block with if block
+
+syn tax : if (1st condition) {
+    // body
+} else if (2nd condition) {
+    // body
+} else {
+    // body
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+&& operator ==> 
+    Returns the first false value or last true value if all value are true
+
+    needs both side to be true 
+
+    To check multiple condition in single if block, the only condition is that all the condition should be true to execute the code, if one condition is false and remaining is true then it will not execute the code
+
+    we can check the n no of condition in if block using && operator
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+|| operator ==>  
+    Returns the first true value or the last false value if the all are false
+
+    stops at the first true value
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Switch Statement ==> 
+    it is used to execute different blocks of code based on different conditions. It is often used as an alternative to multiple if...else if ...else statement when comparing single value against multiple possible cases. 
+syntax: 
+        switch (expression) {
+        case value1:
+            // code to execute if ecpression === value 1
+            break;
+        case value2: 
+            // code to execute if exprssion === value 2
+            break;
+        default:
+            // code to execute if none of the cases match 
+        }
+
+
+    In javaScript if the case value matched to the expression then Javascript execute all the cases after matched case except default.
+
+    to prevent that execution of all remaining cases we will use break keyword
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+## break ==> 
+    break keyword is used to exit te loop or switch statement immediately, preventing further execution of the remaining cases or iterations
+
+
+    falsy values : false, 0, -0, BigInt 0n, "", null, undefined, NaN
+
+    Truthy Values : "0", 'false', " ", [], {}, function() {}
+
+    // whenever any value including falsy values declare as string or in between ' '/" " then that value consider as truthy 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Question ==>
+    How can we check the array whether it is empty or not ??
+
+    const userEmail = []
+
+    if (userEmail.length == 0) {
+        console.log("array is empty");
+    } else {
+        console.log("array is not empty"); 
+    }
+
+    Whenever we want to check array whether it is empty or not then we find the length of array and compare with the 0
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Question ==>
+    How can we check the object whether it is empty or not?? 
+
+    
+    const userEmail = {}
+
+    if (Object.keys.userEmail.length == 0) {
+        console.log("array is empty");
+    } else {
+        console.log("array is not empty"); 
+    }
+
+
+    false == 0    ==> true
+    false == " "  ==> true
+    0 == " "      ==> true
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+### Nullish coalescing operator ===>    
+        The ?? operator in JavaScript is the nullish coalescing operator. It returns the right-hand operand when the left-hand operand is null or undefined; otherwise, it returns the left-hand operand
+
+Syntax : left ?? right
+
+
+### How it works:
+
+    > If left is neither null nor undefined, the operator returns left.
+
+    > If left is null or undefined, the operator returns right.
+
+    ex: 
+    let a = null;
+    let b = "Hello";
+
+    console.log(a ?? b);  // "Hello" because a is null
+
+    let c = "Goodbye";
+    console.log(c ?? b);  // "Goodbye" because c is not null or undefined
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+#### ==> Differences between ?? and || ==>
+            The key difference between ?? and || (logical OR) is that || returns the right-hand operand if the left-hand operand is falsy (i.e., false, 0, NaN, "", null, or undefined), while ?? only cares about null and undefined.
+
+    Ex: 
+    let x = 0;
+    let y = "Non-null value";
+
+    console.log(x || y);   // "Non-null value" because 0 is falsy
+
+    console.log(x ?? y);   // 0 because 0 is not null or undefined
+    In summary:
+
+    Use ?? when you want to assign a default value only if the value is null or undefined.
+
+    Use || when you want to assign a default value if the value is any falsy value (like 0, false, NaN, "", etc.).
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
