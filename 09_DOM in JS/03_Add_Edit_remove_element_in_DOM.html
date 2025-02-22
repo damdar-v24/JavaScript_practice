@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>Bootstrap</li>
+    </ul>
+    
+</body>
+    <script> 
+
+//      Code to Add element
+
+        function addLanguage (langName) {
+            const li = document.createElement('li')
+            li.innerHTML = `${langName}`
+            document.querySelector('.language')
+            .appendChild(li)
+        }
+        addLanguage("Python")
+        addLanguage("TypeScript")
+
+        function addOptiLanguage(langName) {
+            const li = document.createElement('li');
+
+            //  const addText = document.createTextnode(langName)
+            //  li.appendChild(addText)
+           li.appendChild( document.createTextNode(langName))
+            document.querySelector('.language').appendChild(li)
+        }
+
+        addOptiLanguage('Java')
+
+
+
+//      Code to edit element
+
+        const secondLang = document.querySelector("li:nth-child(2)")
+
+//      1st way to edit element: by changing the inner html only
+       // secondLang.innerHTML = "Mojo"   
+
+//      2nd way to edit element: creating new element then replace to existing element
+       const newli = document.createElement('li')
+       newli.textContent = "Mojo"
+       secondLang.replaceWith(newli) 
+
+//      3rd way to edit element: by changing the outer html
+        const firstLang = document.querySelector("li:first-child")
+        firstLang.outerHTML = "<li>TypeScript</li>"
+
+
+//  Remove Element
+
+        const lastLang = document.querySelector('li:last-child')
+        lastLang.remove()
+        
+    </script>
+</html>
